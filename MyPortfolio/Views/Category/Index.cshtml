@@ -1,23 +1,35 @@
 ﻿@model  List<MyPortfolio.Models.TblCategory>
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
 }
 
 <h2>Categories</h2>
 
 <table class="table table-bordered">
-    <tr>
-        <th>#</th>
-        <th>Category NAme</th>        
-    </tr>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Category Name</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+               
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.Name</td>
+                <td> <a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
+                <td> <a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-danger">Güncelle</a></td>
+            </tr>
 
-    @foreach(var item in Model){
-     <tr>
-         <td>@item.CategoryId</td>
-         <td>@item.Name</td>
-     </tr>
+        }
+        </tbody>
 
-     }
+    
     
 </table>
 <br/>
