@@ -34,6 +34,11 @@ namespace MyPortfolio.Controllers
 
         }
 
+        public PartialViewResult AdminLayoutScripts() {
+            return PartialView();
+
+        }
+
         public PartialViewResult AdminLayoutFooter() {
             return PartialView();
 

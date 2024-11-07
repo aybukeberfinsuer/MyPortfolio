@@ -17,5 +17,6 @@ namespace MyPortfolio.Models
         public int BannerId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public Nullable<bool> IsShown { get; set; }
     }
 }
