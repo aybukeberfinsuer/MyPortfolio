@@ -389,6 +389,10 @@
     <Content Include="Views\Project\CreateProject.cshtml" />
     <Content Include="Views\Project\UpdateProject.cshtml" />
     <Content Include="Views\AdminLayout\AdminLayoutHead.cshtml" />
+    <Content Include="Views\AdminLayout\AdminLayoutSpinner.cshtml" />
+    <Content Include="Views\AdminLayout\AdminLayoutFooter.cshtml" />
+    <Content Include="Views\AdminLayout\AdminLayoutSideBar.cshtml" />
+    <Content Include="Views\AdminLayout\AdminLayoutNavbar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

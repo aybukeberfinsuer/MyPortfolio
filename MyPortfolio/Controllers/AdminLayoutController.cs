@@ -18,5 +18,25 @@ namespace MyPortfolio.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult AdminLayoutSpinner()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult AdminLayoutSideBar() {
+            return PartialView();
+
+        }
+
+        public PartialViewResult AdminLayoutNavbar() {
+            return PartialView();
+
+        }
+
+        public PartialViewResult AdminLayoutFooter() {
+            return PartialView();
+
+        }
     }
 }
