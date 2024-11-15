@@ -1,0 +1,35 @@
+﻿@model MyPortfolio.Models.TblEducation
+@{
+    ViewBag.Title = "CreateEducation";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Create New Education</h2>
+<form method="post">
+
+    <label>School Name </label>
+    @Html.TextBoxFor(x => x.SchoolName, new { @class = "form-control" })
+    <br />
+    <label>Department Name </label>
+    @Html.TextBoxFor(x => x.Department, new { @class = "form-control" })
+    <br />
+    <label>Description </label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Start Date </label>
+    <input type="date" name="StartDate" class="form-control" />
+    <br />
+    <label>End Date <span> <strong>If you have already finished college, please do not select any date.</strong></span>  </label>
+    <input type="date" name="EndDate" class="form-control" />
+    <br />
+    <label>Degree  </label>
+   <select name="Degree" class="form-control bg-dark">
+       <option disabled>Select your degree</option>
+       <option value="Associate">Associate Degree</option>
+       <option value="Bachelors">Bachelor's Degree</option>
+       <option value="Master">Master's Degree</option>      
+   </select>
+    <br />
+    <button class="btn btn-outline-primary">Save</button>
+
+</form>

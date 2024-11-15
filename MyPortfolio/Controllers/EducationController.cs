@@ -25,7 +25,42 @@ namespace MyPortfolio.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult CreateEducation()
+        {
+            return View();
+        }
+		[HttpPost]
+		public ActionResult CreateEducation(TblEducation education_model)
+		{
+			db.TblEducations.Add(education_model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+		}
 
-      
-    }
+		[HttpGet]
+		public ActionResult UpdateEducation(int id)
+		{
+			var education = db.TblEducations.Find(id);
+			return View(education);
+		}
+
+		[HttpPost]
+		public ActionResult UpdateEducation(TblEducation model)
+		{
+			var value = db.TblEducations.Find(model.EducationId);
+			value.SchoolName = model.SchoolName;
+			value.Description = model.Description;
+			value.StartDate = model.StartDate;
+			value.EndDate = model.EndDate;
+			value.Degree = model.Degree;
+			value.Department = model.Department;
+			db.SaveChanges();
+			return RedirectToAction("Index");
+		}
+
+
+
+
+	}
 }

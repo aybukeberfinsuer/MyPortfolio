@@ -1,0 +1,38 @@
+﻿@model MyPortfolio.Models.TblEducation
+@{
+    ViewBag.Title = "UpdateEducation";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Update Education</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.EducationId)
+    <label>School Name </label>
+    @Html.TextBoxFor(x => x.SchoolName, new { @class = "form-control" })
+    <br />
+    <label>Department Name </label>
+    @Html.TextBoxFor(x => x.Department, new { @class = "form-control" })
+    <br />
+    <label>Description </label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Start Date</label>
+    <input type="datetime" name="StartDate" value="@Model.StartDate.ToString("d")" class="form-control" />
+    <br />
+    <label>End Date <span><strong>If you have already finished college, please do not select any date.</strong></span></label>
+    <input type="datetime" value="@(Model.EndDate.HasValue ? Model.EndDate.Value.ToString("d") : "")" name="EndDate" class="form-control" />
+    <br />
+    <label>Degree </label>
+
+    <select name="Degree" class="form-control bg-dark">
+        <option disabled>Seçiminizi Yapın</option>
+        <option value="Associate" @(Model.Degree == "Associate" ? "selected" : "")>Associate Degree</option>
+        <option value="Bachelors" @(Model.Degree == "Bachelors" ? "selected" : "")>Bachelor's Degree</option>
+        <option value="Master" @(Model.Degree == "Master" ? "selected" : "")>master Degree</option>
+    </select>
+    <br />
+    <button class="btn btn-outline-primary">Update</button>
+    <br />
+
+</form>

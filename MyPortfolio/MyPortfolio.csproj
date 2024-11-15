@@ -396,6 +396,8 @@
     <Content Include="Views\AdminLayout\AdminLayoutNavbar.cshtml" />
     <Content Include="Views\AdminLayout\AdminLayoutScripts.cshtml" />
     <Content Include="Views\Education\Index.cshtml" />
+    <Content Include="Views\Education\CreateEducation.cshtml" />
+    <Content Include="Views\Education\UpdateEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
