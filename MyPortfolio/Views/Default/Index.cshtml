@@ -1,8 +1,7 @@
-﻿
+﻿﻿
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html class="no-js ss-preload" lang="en">
 <head>
@@ -26,8 +25,8 @@
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="~/Template/luther-1.0.0/luther-1.0.0/image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="~/Template/luther-1.0.0/luther-1.0.0/image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Template/luther-1.0.0/luther-1.0.0/css/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Template/luther-1.0.0/luther-1.0.0/css/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
 </head>
@@ -68,7 +67,7 @@
             <div class="row wide main-nav-wrap">
                 <nav class="column lg-12 main-nav">
                     <ul>
-                        <li><a href="index.html" class="home-link">Aybüke Berfin Süer</a></li>
+                        <li><a href="index.html" class="home-link">Luther.</a></li>
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
                         <li><a href="#works" class="smoothscroll">My Projects</a></li>
@@ -82,41 +81,9 @@
         ==================================================- -->
         <main class="s-content">
 
-
+            @Html.Action("DefaultBanner")
             <!-- ### intro
             ================================================== -->
-            <section id="intro" class="s-intro target-section">
-
-                <div class="row intro-content wide">
-
-                    <div class="column">
-                        <div class="text-pretitle with-line">
-                            Hello World
-                        </div>
-
-                        <h1 class="text-huge-title">
-                            I am Luther, <br>
-                            a digital designer <br>
-                            & frontend <br>
-                            developer based <br>
-                            in Somewhere.
-                        </h1>
-                    </div>
-
-                    <ul class="intro-social">
-                        <li><a href="#0">Behance</a></li>
-                        <li><a href="#0">Twitter</a></li>
-                        <li><a href="#0">Dribbble</a></li>
-                        <li><a href="#0">Instagram</a></li>
-                    </ul>
-
-                </div> <!-- end intro content -->
-
-                <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" /></svg>
-                </a>
-
-            </section> <!-- end s-intro -->
             <!-- ### about
             ================================================== -->
             <section id="about" class="s-about target-section">
@@ -125,8 +92,8 @@
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="~/Template/luther-1.0.0/luther-1.0.0/images/about-photo.jpg"
-                             srcset="~/Template/luther-1.0.0/luther-1.0.0/images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="" class="about-info__pic" data-animate-el>
+                        <img src="images/about-photo.jpg"
+                             srcset="~/Template/luther-1.0.0/luther-1.0.0/images/about-photo.jpg 1x,~/Template/luther-1.0.0/luther-1.0.0/images/about-photo@2x.jpg 2x" alt="" class="about-info__pic" data-animate-el>
                     </div>
 
                     <div class="column lg-6 md-12">
@@ -148,23 +115,8 @@
                     </div>
                 </div> <!-- about-info -->
 
-
-                <div class="row about-expertise" data-animate-block>
-                    <div class="column lg-12">
-
-                        <h2 class="text-pretitle" data-animate-el>Expertise</h2>
-
-                        <ul class="skills-list h1" data-animate-el>
-                            <li>Visual Design</li>
-                            <li>Branding Identity</li>
-                            <li>UI Design</li>
-                            <li>Product Design</li>
-                            <li>Prototyping</li>
-                            <li>Illustration</li>
-                        </ul>
-
-                    </div>
-                </div> <!-- end about-expertise -->
+                @Html.Action("DefaultExperties")
+                <!-- end about-expertise -->
 
 
                 <div class="row about-timelines" data-animate-block>
@@ -269,7 +221,7 @@
                                 <a class="folio-list__item-link" href="#modal-01">
                                     <div class="folio-list__item-pic">
                                         <img src="~/Template/luther-1.0.0/luther-1.0.0/images/portfolio/fuji.jpg"
-                                             srcset="~/Template/luther-1.0.0/luther-1.0.0/images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="">
+                                             srcset="~/Template/luther-1.0.0/luther-1.0.0/images/portfolio/fuji.jpg 1x, ~/Template/luther-1.0.0/luther-1.0.0/images/portfolio/fuji@2x.jpg 2x" alt="">
                                     </div>
 
                                     <div class="folio-list__item-text">

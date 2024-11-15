@@ -77,8 +77,7 @@
             <PropertyRef Name="ExpertiseId" />
           </Key>
           <Property Name="ExpertiseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="TblMessages">
           <Key>
@@ -215,8 +214,7 @@
             <PropertyRef Name="ExpertiseId" />
           </Key>
           <Property Name="ExpertiseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TblMessage">
           <Key>
@@ -373,7 +371,6 @@
               <MappingFragment StoreEntitySet="TblExpertises">
                 <ScalarProperty Name="ExpertiseId" ColumnName="ExpertiseId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
