@@ -451,6 +451,8 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\DefaultBanner.cshtml" />
     <Content Include="Views\Default\DefaultExperties.cshtml" />
+    <Content Include="Views\Default\DefaultExperience.cshtml" />
+    <Content Include="Views\Default\DefaultEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
