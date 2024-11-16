@@ -28,5 +28,16 @@ namespace MyPortfolio.Controllers
 			var values = db.TblExpertises.ToList();
 			return PartialView(values);
 		}
+
+        public PartialViewResult DefaultExperience()
+        {
+            var values = db.TblExperiences.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultEducation()
+        {
+            var values=db.TblEducations.ToList();  
+            return PartialView(values);
+        }
 	}
 }
