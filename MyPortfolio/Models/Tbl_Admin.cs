@@ -11,8 +11,10 @@ namespace MyPortfolio.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Tbl_Admin
+	using System.ComponentModel.DataAnnotations.Schema;
+	using System.Web;
+
+	public partial class Tbl_Admin
     {
         public int AdminId { get; set; }
         public string Email { get; set; }
@@ -20,5 +22,8 @@ namespace MyPortfolio.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public string ImageUrl { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase ImageFile { get; set; }
     }
 }

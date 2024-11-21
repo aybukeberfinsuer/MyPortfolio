@@ -16,7 +16,8 @@
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
-            @Html.Partial("~/Views/AdminLayout/AdminLayoutNavbar.cshtml")
+            @*@Html.Partial("~/Views/AdminLayout/AdminLayoutNavbar.cshtml")*@
+            @Html.Action("AdminLayoutNavbar","AdminLayout")
             <!-- Navbar End -->
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
