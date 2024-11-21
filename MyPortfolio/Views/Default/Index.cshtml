@@ -229,29 +229,6 @@
     <script src="~/Template/luther-1.0.0/luther-1.0.0/js/plugins.js"></script>
     <script src="~/Template/luther-1.0.0/luther-1.0.0/js/main.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var modal = document.getElementById("modal-message");
-            var btn = document.querySelector(".contact-btn");
-            var span = document.querySelector(".modal .close");
-
-            btn.onclick = function (e) {
-                e.preventDefault();
-                modal.style.display = "block";
-            }
-
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-
-            if (span) {
-                span.onclick = function () {
-                    modal.style.display = "none";
-                }
-            }
-        });
-    </script> 
+    
 </body>
 </html>
