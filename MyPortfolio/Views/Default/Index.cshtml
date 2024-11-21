@@ -83,9 +83,9 @@
 
             @Html.Action("DefaultBanner")
             <!-- ### intro
-    ================================================== -->
+            ================================================== -->
             <!-- ### about
-    ================================================== -->
+            ================================================== -->
             <section id="about" class="s-about target-section">
 
 
@@ -129,79 +129,79 @@
 
             </section> <!-- end s-about -->
             <!-- ### works
-    ================================================== -->
+            ================================================== -->
             @Html.Action("DefaultProjects")
             <!-- end s-works -->
             <!-- ### contact
-    ================================================== -->
-        <section id="contact" class="s-contact target-section">
+            ================================================== -->
+            <section id="contact" class="s-contact target-section">
 
-            <div class="row contact-top">
-                <div class="column lg-12">
-                    <h2 class="text-pretitle">
-                        Get In Touch
-                    </h2>
+                <div class="row contact-top">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">
+                            Get In Touch
+                        </h2>
 
-                    <p class="h1">
-                        I love to hear from you.
-                        Whether you have a question or just
-                        want to chat about design, tech & art — shoot me a message.
-                    </p>
-                </div>
-            </div> <!-- end contact-top -->
-
-            <div class="row contact-bottom">
-                <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
-                    <h3 class="text-pretitle">Reach me at</h3>
-                    <p class="contact-links">
-                        <a href="mailto:sayhello@luther.com" class="mailtoui">sayhello@luther.com</a> <br>
-                        <a href="tel:+1975432345">+197 543 2345</a>
-                    </p>
-                </div>
-                <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
-                    <h3 class="text-pretitle">Social</h3>
-                    <ul class="contact-social">
-                        <li><a href="#0">Behance</a></li>
-                        <li><a href="#0">Dribble</a></li>
-                        <li><a href="#0">Twitter</a></li>
-                        <li><a href="#0">Instagram</a></li>
-                        <li><a href="#0">Github</a></li>
-                    </ul>
-                </div>
-                <div class="column lg-4 md-12 contact-block">
-                    <a href="#modal-message" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
-                </div>
-            </div> <!-- end contact-bottom -->
-            <div id="modal-message" hidden>
-                <div class="modal-popup">
-                    <img src="" alt="">
-
-                    <div class="modal-popup__desc">
-                        <form method="post">
-                            <label>Name Surname</label>
-                            <input type="text" name="Name" class="form-control" />
-
-                            <label>Email</label>
-                            <input type="email" name="Email" class="form-control" />
-
-                            <label>Subject</label>
-                            <input type="text" name="Subject" class="form-control" />
-
-                            <label>Yor message</label>
-                            <input type="text" name="MessageContent" class="form-control" rows="4" />
-                            <br />
-                            <button class="btn btn-outline-dark">Send Message</button>
-
-
-                        </form>
-                        
+                        <p class="h1">
+                            I love to hear from you.
+                            Whether you have a question or just
+                            want to chat about design, tech & art — shoot me a message.
+                        </p>
                     </div>
+                </div> <!-- end contact-top -->
 
-                    
-                </div>
-            </div> <!-- end modal -->
+                <div class="row contact-bottom">
+                    <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+                        <h3 class="text-pretitle">Reach me at</h3>
+                        <p class="contact-links">
+                            <a href="mailto:sayhello@luther.com" class="mailtoui">sayhello@luther.com</a> <br>
+                            <a href="tel:+1975432345">+197 543 2345</a>
+                        </p>
+                    </div>
+                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
+                        <h3 class="text-pretitle">Social</h3>
+                        <ul class="contact-social">
+                            <li><a href="#0">Behance</a></li>
+                            <li><a href="#0">Dribble</a></li>
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Instagram</a></li>
+                            <li><a href="#0">Github</a></li>
+                        </ul>
+                    </div>
+                    <div class="column lg-4 md-12 contact-block">
+                        <a href="#modal-message" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
+                    </div>
+                </div> <!-- end contact-bottom -->
+                <div id="modal-message" hidden>
+                    <div class="modal-popup">
+                        <img src="" alt="">
 
-        </section> <!-- end contact -->
+                        <div class="modal-popup__desc">
+                            <form method="post">
+                                <label>Name Surname</label>
+                                <input type="text" name="Name" class="form-control" />
+
+                                <label>Email</label>
+                                <input type="email" name="Email" class="form-control" />
+
+                                <label>Subject</label>
+                                <input type="text" name="Subject" class="form-control" />
+
+                                <label>Yor message</label>
+                                <input type="text" name="MessageContent" class="form-control" rows="4" />
+                                <br />
+                                <button class="btn btn-outline-dark">Send Message</button>
+
+
+                            </form>
+
+                        </div>
+
+
+                    </div>
+                </div> <!-- end modal -->
+
+            </section> <!-- end contact -->
 
         </main> <!-- end s-content -->
         <!-- ## footer
@@ -229,5 +229,29 @@
     <script src="~/Template/luther-1.0.0/luther-1.0.0/js/plugins.js"></script>
     <script src="~/Template/luther-1.0.0/luther-1.0.0/js/main.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modal = document.getElementById("modal-message");
+            var btn = document.querySelector(".contact-btn");
+            var span = document.querySelector(".modal .close");
+
+            btn.onclick = function (e) {
+                e.preventDefault();
+                modal.style.display = "block";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            if (span) {
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script> 
 </body>
 </html>
