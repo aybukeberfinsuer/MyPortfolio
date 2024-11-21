@@ -11,12 +11,13 @@
     <div class="container-fluid position-relative d-flex p-0">
         @Html.Partial("~/Views/AdminLayout/AdminLayoutSpinner.cshtml")
         <!-- Sidebar Start -->
-        @Html.Partial("~/Views/AdminLayout/AdminLayoutSideBar.cshtml")
+        @Html.Action("AdminLayoutSideBar","AdminLayout")
+        @*@Html.Partial("~/Views/AdminLayout/AdminLayoutSideBar.cshtml")*@
         <!-- Sidebar End -->
         <!-- Content Start -->
         <div class="content">
-            <!-- Navbar Start -->
-            @*@Html.Partial("~/Views/AdminLayout/AdminLayoutNavbar.cshtml")*@
+            <!-- Navbar Start -->  
+           
             @Html.Action("AdminLayoutNavbar","AdminLayout")
             <!-- Navbar End -->
             <!-- Blank Start -->

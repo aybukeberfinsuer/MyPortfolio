@@ -26,9 +26,14 @@ namespace MyPortfolio.Controllers
         }
 
         public PartialViewResult AdminLayoutSideBar() {
-            return PartialView();
+			var email = Session["email"].ToString();
+			var admin = db.Tbl_Admin.FirstOrDefault(x => x.Email == email);
 
-        }
+			ViewBag.nameSurname = admin.Name + " " + admin.Surname;
+			ViewBag.image = admin.ImageUrl;
+			return PartialView();
+
+		}
 
         public PartialViewResult AdminLayoutNavbar() {
 
