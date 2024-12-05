@@ -47,6 +47,28 @@ namespace MyPortfolio.Controllers
             return PartialView(values);
         }
 
+        [HttpGet]
+        public PartialViewResult SendMessage()
+        {
+            return PartialView();
+        }
+		[HttpPost]
+		public ActionResult SendMessage(TblMessage model)
+		{
+            model.IsRead = false;
+            db.TblMessages.Add(model);
+            db.SaveChanges();
+			return RedirectToAction("Index");
+		}
+
+        public PartialViewResult DefaultAbout()
+        {
+            var values=db.TblAbouts.ToList();
+            return PartialView(values);
+        }
+
         
+
+
 	}
 }
