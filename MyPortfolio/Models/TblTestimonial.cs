@@ -11,13 +11,18 @@ namespace MyPortfolio.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class TblTestimonial
-    {
-        public int TestimonialId { get; set; }
-        public string NameSurname { get; set; }
+	using System.ComponentModel.DataAnnotations.Schema;
+	using System.Web;
+
+	public partial class TblTestimonial
+	{
+		public int TestimonialId { get; set; }
+		public string NameSurname { get; set; }
         public string Title { get; set; }
         public string ImageUrl { get; set; }
         public string Comment { get; set; }
-    }
+
+		[NotMapped]
+		public HttpPostedFileBase ImageFile { get; set; }
+	}
 }

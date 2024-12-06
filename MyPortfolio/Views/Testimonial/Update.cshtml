@@ -1,0 +1,44 @@
+﻿@model MyPortfolio.Models.TblTestimonial
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Update</h2>
+
+
+<form method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(x => x.TestimonialId)
+
+    <div>
+        <label>Upload Image</label>
+        <input type="file" name="ImageFile" class="form-control" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Name Surname</label>
+        @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    </div>
+
+    <br />
+
+    <div>
+        <label>Title</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    </div>
+
+    <br />
+
+    <div>
+        <label>Comment</label>
+        @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
+    </div>
+
+    <br />
+
+
+
+    <button class="btn btn-outline-primary">Save</button>
+</form>

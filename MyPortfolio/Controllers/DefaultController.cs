@@ -24,6 +24,12 @@ namespace MyPortfolio.Controllers
             return PartialView(values);
         }
 
+        public PartialViewResult DefaultSocialMedia()
+        {
+            var values = db.TblSocialMedias.ToList();
+            return PartialView(values);
+        }
+
         public PartialViewResult DefaultExperties()
 		{
 			var values = db.TblExpertises.ToList();
@@ -67,6 +73,11 @@ namespace MyPortfolio.Controllers
             return PartialView(values);
         }
 
+        public PartialViewResult DefaultTestimonial()
+        {
+            var values=db.TblTestimonials.ToList();
+            return PartialView(values);
+        }
         
 
 
