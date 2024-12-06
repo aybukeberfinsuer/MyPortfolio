@@ -1,0 +1,39 @@
+﻿@model List<MyPortfolio.Models.TblSocialMedia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+    int count = 0;
+}
+
+<h2>Social Media</h2>
+
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <th></th>
+        <th>Which social media application ?</th>
+        <th>Url</th>
+        <th>Delete</th>
+        <th>Update</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count </td>
+            <td>@item.Name </td>
+            <td> @item.Url</td>
+            <td> <a href="/SocialMedia/Delete/@item.SocialMediaId" class="btn btn-outline-danger">Remove</a> </td>
+            <td> <a href="/SocialMedia/Update/@item.SocialMediaId" class="btn btn-outline-warning">Update</a> </td>
+
+        </tr>
+
+    }
+
+
+</table>
+
+<br />
+<a href="/SocialMedia/Create" class="btn btn-outline-success">Add New Social Media Information</a>
