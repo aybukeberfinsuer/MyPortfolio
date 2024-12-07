@@ -1,4 +1,4 @@
-Merhaba bir süredir üzerinde çalıştığım proje MVC ile admin panelli bir portfolyo projesidir. Aşağıda sırasıyla grsellerine ulaşabilirsiniz. <br>
+Merhaba bir süredir üzerinde çalıştığım proje MVC ile admin panelli bir portfolyo projesidir. Aşağıda sırasıyla görsellerine ulaşabilirsiniz. <br>
 1)Login panelim
 
 ![image](https://github.com/user-attachments/assets/32e12c83-bfd4-4c6d-abfd-a41074277c9a)
