@@ -1,0 +1,29 @@
+﻿@model MyPortfolio.Models.TblExperience
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<form method="post">
+
+    <label>Company Name </label>
+    @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+    <br />
+    <label>Title </label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Description </label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Start Date </label>
+    <input type="date" name="StartDate" class="form-control" />
+    <br />
+    <label>End Date <span> <strong>If you have already finished, please do not select any date.</strong></span>  </label>
+    <input type="date" name="EndDate" class="form-control" />
+    <br />
+    
+    <button class="btn btn-outline-primary">Save</button>
+
+</form>
