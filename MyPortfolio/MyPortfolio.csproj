@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -567,6 +568,8 @@
     <Content Include="Views\Contact\Update.cshtml" />
     <Content Include="Views\Default\DefalutContact.cshtml" />
     <Content Include="Views\Message\ReadMessages.cshtml" />
+    <Content Include="Views\Banner\Index.cshtml" />
+    <Content Include="Views\Banner\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
