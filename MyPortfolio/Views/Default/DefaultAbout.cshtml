@@ -8,7 +8,7 @@
         <div class="row about-info wide" data-animate-block>
 
             <div class="column lg-6 md-12 about-info__pic-block">
-                <img src="@item.ImageUrl"
+                <img src="@item.ImageUrl" style="width:350px; margin:100px;"
                       alt="" class="about-info__pic" data-animate-el>
             </div>
 
@@ -21,7 +21,8 @@
                     <p class="attention-getter" data-animate-el>
                         @item.Description
                     </p>
-                    <a href="@item.CvUrl" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
+                    <a href="@item.CvUrl" class="btn btn--medium u-fullwidth" data-animate-el download="CV.pdf">Download CV</a>
+
 
                 </div>
             </div>

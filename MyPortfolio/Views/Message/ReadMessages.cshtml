@@ -1,12 +1,15 @@
 ﻿@model List<MyPortfolio.Models.TblMessage>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ReadMessages";
     Layout = "~/Views/AdminLayout/Layout.cshtml";
     int count = 0;
-
 }
 
+<h2>ReadMessages</h2>
+
+
 <h2>Unread Messages</h2>
+
 
 <table class="table table-bordered">
     <thead>
@@ -15,6 +18,8 @@
             <th>Name Surname </th>
             <th>Email</th>
             <th>Subject</th>
+            <th>Date</th>
+            <th>Delete</th>
             <th>Open Message</th>
         </tr>
 
@@ -29,8 +34,10 @@
                 <td>@item.Name</td>
                 <td>@item.Email</td>
                 <td>@item.Subject</td>
-                <td><a href="/Message/Details/@item.MessageId" type="button" class="btn btn-outline-info" > Details</a></td>
-                
+                <td>@item.DataSent</td>
+                <td> <a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-outline-danger">Delete</a></td>
+                <td><a href="/Message/Details/@item.MessageId" type="button" class="btn btn-outline-info"> Details</a></td>
+
             </tr>
 
         }
@@ -40,4 +47,4 @@
 
 </table>
 <br />
-<a href="/Message/ReadMessages" type="button" class="btn btn-outline-info"> Read Messages</a>
+<a href="/Message/Index" type="button" class="btn btn-outline-info"> Go Back</a>

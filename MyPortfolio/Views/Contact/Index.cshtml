@@ -1,0 +1,31 @@
+﻿@model List<MyPortfolio.Models.TblContact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            
+            <td>
+                <a href="/Contact/Update/@item.ContactId" class="btn btn-outline-warning">Update</a>
+            </td>
+        </tr>
+    }
+
+</table>

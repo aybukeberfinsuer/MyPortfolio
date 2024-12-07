@@ -36,13 +36,19 @@ namespace MyPortfolio.Controllers
 		}
 
         public PartialViewResult AdminLayoutNavbar() {
-
+          
 			var email = Session["email"].ToString();
 			var admin = db.Tbl_Admin.FirstOrDefault(x => x.Email == email);
 
 			ViewBag.nameSurname = admin.Name + " " + admin.Surname;
 			ViewBag.image = admin.ImageUrl;
-			return PartialView();
+			var unreadMessages = db.TblMessages
+								  .Where(m => (bool)!m.IsRead)
+								  .OrderByDescending(m => m.DataSent)
+								  .Take(3)
+								  .ToList();
+
+			return PartialView(unreadMessages);
 
 		}
 

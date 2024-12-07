@@ -35,5 +35,11 @@ namespace MyPortfolio.Controllers
             return RedirectToAction("Index");
 
         }
+
+        public ActionResult ReadMessages()
+        {
+            var value=db.TblMessages.Where(x=>x.IsRead == true).ToList();
+            return View(value);
+        }
     }
 }

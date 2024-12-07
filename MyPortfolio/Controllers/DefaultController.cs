@@ -53,11 +53,17 @@ namespace MyPortfolio.Controllers
             return PartialView(values);
         }
 
-        [HttpGet]
-        public PartialViewResult SendMessage()
-        {
-            return PartialView();
-        }
+		[HttpGet]
+		public PartialViewResult SendMessage()
+		{
+			// ViewBag ile sosyal medya verilerini gönderme
+			List<TblSocialMedia> socialMedia = db.TblSocialMedias.ToList();
+			ViewBag.SocialMedia = socialMedia;
+
+			// İletişim bilgilerini model olarak gönderme
+			var value = db.TblContacts.ToList();
+			return PartialView(value);
+		}
 		[HttpPost]
 		public ActionResult SendMessage(TblMessage model)
 		{
@@ -84,6 +90,12 @@ namespace MyPortfolio.Controllers
         public PartialViewResult DefaultTestimonial()
         {
             var values=db.TblTestimonials.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefalutContact()
+        {
+            var values=db.TblContacts.ToList();
             return PartialView(values);
         }
         
