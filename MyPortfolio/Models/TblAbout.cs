@@ -11,13 +11,19 @@ namespace MyPortfolio.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class TblAbout
-    {
-        public int AboutId { get; set; }
-        public string ImageUrl { get; set; }
+	using System.ComponentModel.DataAnnotations.Schema;
+	using System.Web;
+
+	public partial class TblAbout
+	{
+		public int AboutId { get; set; }
+		public string ImageUrl { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string CvUrl { get; set; }
-    }
+		[NotMapped]  // Bu alan veritabanýna kaydedilmez
+		public HttpPostedFileBase ImageFile { get; set; }
+		[NotMapped]  // Bu alan veritabanýna kaydedilmez
+		public HttpPostedFileBase CvFile { get; set; }
+	}
 }

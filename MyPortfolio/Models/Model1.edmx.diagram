@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="2dbe7ab15eb649538c42f0c1eda5654f" Name="Diagram1">
         <EntityTypeShape EntityType="MyPortfolioModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyPortfolioModel.TblAbout" Width="1.5" PointX="2.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyPortfolioModel.TblAbout" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MyPortfolioModel.TblBanner" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MyPortfolioModel.TblCategory" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MyPortfolioModel.TblContact" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
