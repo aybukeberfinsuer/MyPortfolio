@@ -136,6 +136,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
+    <Compile Include="Controllers\ExpertisesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -570,6 +571,9 @@
     <Content Include="Views\Message\ReadMessages.cshtml" />
     <Content Include="Views\Banner\Index.cshtml" />
     <Content Include="Views\Banner\Create.cshtml" />
+    <Content Include="Views\Expertises\Index.cshtml" />
+    <Content Include="Views\Expertises\Create.cshtml" />
+    <Content Include="Views\Expertises\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
