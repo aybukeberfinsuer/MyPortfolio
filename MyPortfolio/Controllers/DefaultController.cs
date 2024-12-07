@@ -61,13 +61,21 @@ namespace MyPortfolio.Controllers
 		[HttpPost]
 		public ActionResult SendMessage(TblMessage model)
 		{
-            model.IsRead = false;
-            db.TblMessages.Add(model);
-            db.SaveChanges();
-			return RedirectToAction("Index");
+			if (ModelState.IsValid)
+			{
+				model.DataSent = DateTime.Now;
+                model.IsRead = false;
+
+				db.TblMessages.Add(model);
+				db.SaveChanges();
+
+				return RedirectToAction("Index"); 
+			}
+
+			return View(model);
 		}
 
-        public PartialViewResult DefaultAbout()
+		public PartialViewResult DefaultAbout()
         {
             var values=db.TblAbouts.ToList();
             return PartialView(values);
